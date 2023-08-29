@@ -15,10 +15,10 @@ int pows(int b, int e) {
 int main() {
     int n, r, i, dec, pow = 0;
     int a[100];
-    printf("Input a binary number:");
+    printf("Input an octal number:");
     scanf("%d", &n);
     int sum = 0;
-    int base = 2;
+    int base = 8;
 
     for (i = 0; n > 0; i++) {
         r = n % 10;
@@ -28,20 +28,23 @@ int main() {
         pow++;
         sum = sum + dec;
     }
-    int decimal = sum;
-    int octal[100];
+
+    printf("The decimal num is %d\n", sum);
+
+    int binary[100];
     i = 0;
 
-    for (i = 0; decimal > 0; i++) {
-        r = decimal % 8;
-        decimal = decimal / 8;
-        octal[i] = r;
-    }
-    printf("\n");
-    printf("The octal number is:");
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", octal[j]);
+    for (i = 0; sum > 0; i++) {
+        r = sum % 2;
+        sum = sum / 2;
+        printf("%d ", r);
+        binary[i] = r;
     }
     
+    printf("The binary num is:\n");
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d ", binary[j]);
+    }
+
     return 0;
 }

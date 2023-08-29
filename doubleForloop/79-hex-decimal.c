@@ -28,7 +28,6 @@ int main(){
         sum = sum + dec;
     }
     
-   
     printf("the decimal num is %d ",sum);
     
 }

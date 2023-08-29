@@ -10,7 +10,6 @@ int pows(int b,int e){
     }
 return p;
 }
-
 int main(){
     int n,r,i,dec,pow = 0;
     int a[100];

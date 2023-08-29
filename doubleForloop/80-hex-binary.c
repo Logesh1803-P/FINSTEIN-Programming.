@@ -11,7 +11,6 @@ int pows(int b, int e) {
     }
     return p;
 }
-
 int main() {
     char hex[100];
     printf("Input a hex number: ");
